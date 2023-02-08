@@ -8,6 +8,12 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - breakfast
+  - snack1
+  - snack2
+  - lunch
+  - dinner
+  
 
 responses:
   utter_greet:
@@ -29,6 +35,13 @@ responses:
 
   utter_iamabot:
   - text: ".اننى روبوت مدعوم من Rasa"
+
+actions:
+  - action_ask_for_breakfast
+  - action_ask_for_snack1
+  - action_ask_for_snack2
+  - action_ask_for_lunch
+  - action_ask_for_dinner
 
 session_config:
   session_expiration_time: 60

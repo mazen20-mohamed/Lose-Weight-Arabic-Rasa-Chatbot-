@@ -1,10 +1,14 @@
 import mysql.connector
-
+from datetime import date
+import calendar
+import pandas as pd
+import numpy as np
 mydatabase = mysql.connector.connect(
   host="localhost",
-  user="root",
-  password="root",
-  database="UserData"
+  user="Ebrahim",
+  password="ebrahim",
+  database="UserData",
+  auth_plugin='mysql_native_password'
 )
 
 mycrursor = mydatabase.cursor()
@@ -18,6 +22,10 @@ mycrursor = mydatabase.cursor()
 #   print(p)
 #   return p
 
+def get_calories(id):
+    a = mycrursor.execute("SELECT calories from User_Info where Id = '"+str(id)+"'")
+    p = mycrursor.fetchall()[0][0]
+    return p
 mydatabase.commit()
 
 # def verfiy_login(email,password):

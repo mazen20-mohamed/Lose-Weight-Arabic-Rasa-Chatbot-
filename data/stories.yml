@@ -28,3 +28,28 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: food breakfast
+  steps:
+  - intent: breakfast
+  - action: action_ask_for_breakfast
+
+- story: food snack1
+  steps:
+  - intent: snack1
+  - action: action_ask_for_snack1
+
+- story: food snack2
+  steps:
+  - intent: snack2
+  - action: action_ask_for_snack2
+
+- story: food lunch
+  steps:
+  - intent: lunch
+  - action: action_ask_for_lunch
+
+- story: food dinner
+  steps:
+  - intent: dinner
+  - action: action_ask_for_dinner
