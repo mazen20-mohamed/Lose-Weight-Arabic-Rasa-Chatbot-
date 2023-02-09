@@ -28,9 +28,9 @@ class ActionAskForBreakfast(Action):
         calories = get_calories(id)
         var = ""
         for i in range (m):
-            var+=data[i][0]+" بمقدار "+ str((calories/1000.0)*data[i][1]) + " " + str(data[i][2])+"\n"
-        
-        dispatcher.utter_message(text=var)
+             if data[i][0] != -1.0 :
+                var=data[i][0]+" بمقدار "+ str((calories/1000.0)*data[i][1]) + " " + str(data[i][2])+"\n"
+                dispatcher.utter_message(text=var)
 
         return []
 class ActionAskForSnack1(Action):
@@ -44,9 +44,9 @@ class ActionAskForSnack1(Action):
         calories = get_calories(id)
         var = ""
         for i in range (m):
-            var+=data[i][5]+" بمقدار "+ str((calories/1000.0)*data[i][6]) + " " + str(data[i][7])+"\n"
-        
-        dispatcher.utter_message(text=var)
+             if data[i][5] != -1.0 :
+                var=data[i][5]+" بمقدار "+ str((calories/1000.0)*data[i][6]) + " " + str(data[i][7])+"\n"
+                dispatcher.utter_message(text=var)
         
         return []
 class ActionAskForLunch(Action):
@@ -59,9 +59,9 @@ class ActionAskForLunch(Action):
         calories = get_calories(id)
         var = ""
         for i in range (m):
-            var+=data[i][10]+" بمقدار "+ str((calories/1000.0)*data[i][11]) + " " + str(data[i][12])+"\n"
-        
-        dispatcher.utter_message(text=var)
+             if data[i][10] != -1.0 :
+                 var=data[i][10]+" بمقدار "+ str((calories/1000.0)*data[i][11]) + " " + str(data[i][12])+"\n"
+                 dispatcher.utter_message(text=var)
         
         return []
 class ActionAskForSnack2(Action):
@@ -75,9 +75,9 @@ class ActionAskForSnack2(Action):
         calories = get_calories(id)
         var = ""
         for i in range (m):
-            var+=data[i][16]+" بمقدار "+ str((calories/1000.0)*data[i][17]) + " " + str(data[i][18])+"\n"
-        
-        dispatcher.utter_message(text=var)
+             if data[i][15] != -1.0 :
+                var=data[i][15]+" بمقدار "+ str((calories/1000.0)*data[i][16]) + " " + str(data[i][17])+"\n"
+                dispatcher.utter_message(text=var)
         
         return []
 class ActionAskForDinner(Action):
@@ -90,8 +90,8 @@ class ActionAskForDinner(Action):
         calories = get_calories(id)
         var = ""
         for i in range (m):
-            var+=data[i][21]+" بمقدار "+ str((calories/1000.0)*data[i][22]) + " " + str(data[i][23])+"\n"
-        
-        dispatcher.utter_message(text=var)
+            if data[i][20] != -1.0 :
+                 var=data[i][20]+" بمقدار "+ str((calories/1000.0)*data[i][21]) + " " + str(data[i][22])+"\n"
+                 dispatcher.utter_message(text=var)
         
         return []
