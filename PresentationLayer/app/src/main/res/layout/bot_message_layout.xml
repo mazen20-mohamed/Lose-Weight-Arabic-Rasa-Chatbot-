@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/bot_text_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_bot_msg"
+        android:gravity="center"
+        android:maxWidth="220dp"
+        android:minHeight="32dp"
+        android:paddingLeft="24dp"
+        android:paddingTop="8dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        tools:text="اهلا بك في راسا" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="8dp"
+        android:background="@drawable/bg_bot_msg">
+
+        <ImageView
+            android:id="@+id/bot_image_msg"
+            android:layout_width="220dp"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:background="@drawable/bg_bot_msg"
+            android:layout_height="220dp"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

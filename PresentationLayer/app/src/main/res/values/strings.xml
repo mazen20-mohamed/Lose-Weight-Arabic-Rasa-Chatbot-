@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">PresentationLayer</string>
+    <string name="email">البريد الألكتروني</string>
+    <string name="password">كلمة السر</string>
+    <string name="btn_login">تسجيل الدخول</string>
+    <string name="new_account">مستخدم جديد؟ سجل لدينا</string>
+    <string name="welcome_register">إنشاء حساب</string>
+    <string name="name">اسم المستخدم</string>
+    <string name="next">التالي</string>
+    <string name="age">العمر</string>
+    <string name="height">الطول</string>
+    <string name="weight">الوزن</string>
+    <string name="label">مدى نشاطك</string>
+    <string name="register">إنشاء الحساب</string>
+    <string name="enter_msg">ادخل رسالتك</string>
+    <string name="rasa_chat">رفيعة</string>
+    <string name="gender">النوع</string>
+</resources>
