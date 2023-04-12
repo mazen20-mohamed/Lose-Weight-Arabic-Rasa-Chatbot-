@@ -6,12 +6,10 @@
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from datetime import date
-import calendar
 import pandas as pd
 import numpy as np
 from data_connectivity import *
-
+import math
 
 class ActionAskForBreakfast(Action):
     def name(self) -> Text:
@@ -38,7 +36,7 @@ class ActionAskForBreakfast(Action):
             food_calory = (food_ids[i][1]*breakfast_calory)/100.0
             
             grams = (food_calory*100) / food_item[0][2]
-
+            grams = math.floor(math)
             dispatcher.utter_message(text=food_item[0][1]+" بمقدار " + str(grams) +" جرام ")
 
         return []
@@ -81,7 +79,7 @@ class ActionAskForLunch(Action):
             food_calory = (food_ids[i][1]*lunch_calory)/100.0
             
             grams = (food_calory*100) / food_item[0][2]
-
+            grams = math.floor(math)
             dispatcher.utter_message(text=food_item[0][1]+" بمقدار " + str(grams) +" جرام ")
 
         return []
@@ -109,7 +107,7 @@ class ActionAskForDinner(Action):
             food_calory = (food_ids[i][1]*dinner_calory)/100.0
             
             grams = (food_calory*100) / food_item[0][2]
-
+            grams = math.floor(math)
             dispatcher.utter_message(text=food_item[0][1]+" بمقدار " + str(grams) +" جرام ")
 
         return []
