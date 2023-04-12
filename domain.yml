@@ -9,8 +9,7 @@ intents:
   - mood_unhappy
   - bot_challenge
   - breakfast
-  - snack1
-  - snack2
+  - snack
   - lunch
   - dinner
   
@@ -38,8 +37,7 @@ responses:
 
 actions:
   - action_ask_for_breakfast
-  - action_ask_for_snack1
-  - action_ask_for_snack2
+  - action_ask_for_snack
   - action_ask_for_lunch
   - action_ask_for_dinner
 

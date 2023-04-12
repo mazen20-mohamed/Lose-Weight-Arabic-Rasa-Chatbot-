@@ -10,7 +10,7 @@ import retrofit2.http.HTTP
 class StartApi {
 
     private val retrofit: ApiService = Retrofit.Builder()
-    .baseUrl("https://744c-197-56-21-219.eu.ngrok.io/demo/")
+    .baseUrl("https://affe-2c0f-fc89-801f-b68a-609a-56bf-317e-8ea3.eu.ngrok.io/demo/")
     .addConverterFactory(GsonConverterFactory.create())
     .build()
     .create(ApiService::class.java)

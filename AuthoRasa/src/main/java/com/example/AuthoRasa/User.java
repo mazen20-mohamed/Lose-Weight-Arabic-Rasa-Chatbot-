@@ -2,7 +2,7 @@ package com.example.AuthoRasa;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "UserInfo", uniqueConstraints = {@UniqueConstraint(columnNames = {"email"})})
+@Table(name = "user_info", uniqueConstraints = {@UniqueConstraint(columnNames = {"email"})})
 public class User {
     @Id
     private Long id;

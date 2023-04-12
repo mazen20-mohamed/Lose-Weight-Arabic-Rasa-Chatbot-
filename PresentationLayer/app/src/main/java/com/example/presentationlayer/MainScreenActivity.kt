@@ -31,7 +31,7 @@ class MainScreenActivity : AppCompatActivity(), View.OnClickListener {
         mSendBtn.setOnClickListener(this)
     }
 
-    private fun subscribeObservers() {
+    private fun subscribeObservers() {  
 
         mChatBotViewModel.getBotMessages().observe(this, Observer {  chatBotResponseList ->
 
@@ -59,7 +59,6 @@ class MainScreenActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(view: View?) {
         view?.let {
             when(view.id) {
-
 
                 R.id.msg_btn -> {
                     val message = mMessageET.text.trim().toString()

@@ -1,5 +1,6 @@
 package com.example.presentationlayer.api
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.presentationlayer.Constants
@@ -109,11 +110,12 @@ object ChatBotApiClient {
             try {
 
                 val response:Response<*> = getMessageBot(sender, message).execute()
+
                 if(cancelRequest) return
-
+                Log.d("##",response.body().toString()+ " "+ response.isSuccessful + " " + sender)
                 if(response.code()==200) {
-                    val botResponseList: ArrayList<BotMessage> = (response.body() as ArrayList<BotMessage>)
-
+                    val botResponseList: List<BotMessage> = (response.body() as List<BotMessage>)
+                    Log.d("##",botResponseList.size.toString())
                     botResponseList?.let {
                         mBotResponse.postValue(botResponseList)
 
@@ -168,15 +170,12 @@ object ChatBotApiClient {
             }
 
         }
-
-
         private fun getMessageBot(sender: Int, message: String): Call<List<BotMessage>> = ServiceGenerator.CHAT_BOT_API.messageBot(
             userMessage = Message(
                 message= message,
                 id = sender
             )
         )
-
         // cancel bot request - may be on back press
         fun cancelRequest() {
             cancelRequest = true

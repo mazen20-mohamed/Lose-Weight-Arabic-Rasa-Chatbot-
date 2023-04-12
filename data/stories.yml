@@ -34,15 +34,11 @@ stories:
   - intent: breakfast
   - action: action_ask_for_breakfast
 
-- story: food snack1
+- story: food snack
   steps:
-  - intent: snack1
-  - action: action_ask_for_snack1
+  - intent: snack
+  - action: action_ask_for_snack
 
-- story: food snack2
-  steps:
-  - intent: snack2
-  - action: action_ask_for_snack2
 
 - story: food lunch
   steps:

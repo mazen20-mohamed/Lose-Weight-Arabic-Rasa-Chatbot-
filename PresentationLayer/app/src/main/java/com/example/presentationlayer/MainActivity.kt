@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.View
 import android.view.WindowManager
+import android.view.animation.AnimationUtils
+import android.widget.ImageView
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
@@ -16,10 +19,15 @@ class MainActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+        val img = findViewById<ImageView>(R.id.SplashScreenImage)
+        img.visibility = View.VISIBLE
+        val animationFadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
+        img.startAnimation(animationFadeIn)
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
-        }, 1000)
+        }, 2000)
+
     }
 }

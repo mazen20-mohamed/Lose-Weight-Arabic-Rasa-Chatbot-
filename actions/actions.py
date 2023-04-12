@@ -11,11 +11,8 @@ import calendar
 import pandas as pd
 import numpy as np
 from data_connectivity import *
-current_date = date.today()
-day = calendar.day_name[current_date.weekday()]
-dataframe1 = pd.read_excel(day+'.xlsx')
-data = np.array(dataframe1)
-m = len(data)
+
+
 class ActionAskForBreakfast(Action):
     def name(self) -> Text:
         return "action_ask_for_breakfast"
@@ -26,29 +23,38 @@ class ActionAskForBreakfast(Action):
 
         id = tracker.sender_id
         calories = get_calories(id)
-        var = ""
+        
+        breakfast_calory = (25.0*calories)/100.0
+        meal = get_breakfast_meal()
+        dispatcher.utter_message(text=meal[0][1])
+        if meal[0][2] != 'nan':
+            dispatcher.utter_message(text="ممكن تبص على طريقة الطبخ من خلال اللينك دا "+meal[0][2])
+        dispatcher.utter_message(text="المكونات كالتالي")
+        food_ids = get_food_breakast_id(meal[0][0])
+        m = len(food_ids)
         for i in range (m):
-             if data[i][0] != -1.0 :
-                var=data[i][0]+" بمقدار "+ str((calories/1000.0)*data[i][1]) + " " + str(data[i][2])+"\n"
-                dispatcher.utter_message(text=var)
+            food_item = get_food(food_ids[i][0])
+
+            food_calory = (food_ids[i][1]*breakfast_calory)/100.0
+            
+            grams = (food_calory*100) / food_item[0][2]
+
+            dispatcher.utter_message(text=food_item[0][1]+" بمقدار " + str(grams) +" جرام ")
 
         return []
-class ActionAskForSnack1(Action):
-
+    
+class ActionAskForSnack(Action):
     def name(self) -> Text:
-        return "action_ask_for_snack1"
+        return "action_ask_for_snack"
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
         id = tracker.sender_id
         calories = get_calories(id)
-        var = ""
-        for i in range (m):
-             if data[i][5] != -1.0 :
-                var=data[i][5]+" بمقدار "+ str((calories/1000.0)*data[i][6]) + " " + str(data[i][7])+"\n"
-                dispatcher.utter_message(text=var)
-        
+    
         return []
+
 class ActionAskForLunch(Action):
     def name(self) -> Text:
         return "action_ask_for_lunch"
@@ -57,29 +63,30 @@ class ActionAskForLunch(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         id = tracker.sender_id
         calories = get_calories(id)
-        var = ""
-        for i in range (m):
-             if data[i][10] != -1.0 :
-                 var=data[i][10]+" بمقدار "+ str((calories/1000.0)*data[i][11]) + " " + str(data[i][12])+"\n"
-                 dispatcher.utter_message(text=var)
-        
-        return []
-class ActionAskForSnack2(Action):
+        lunch_calory = (35.0*calories)/100.0
 
-    def name(self) -> Text:
-        return "action_ask_for_snack2"
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        id = tracker.sender_id
-        calories = get_calories(id)
-        var = ""
+        meal = get_lunch_meal()
+
+        dispatcher.utter_message(text=meal[0][1])
+        if meal[0][2] != 'nan':
+            dispatcher.utter_message(text="ممكن تبص على طريقة الطبخ من خلال اللينك دا "+meal[0][2])
+        dispatcher.utter_message(text="المكونات كالتالي")
+
+        food_ids = get_food_lunch_id(meal[0][0])
+
+        m = len(food_ids)
         for i in range (m):
-             if data[i][15] != -1.0 :
-                var=data[i][15]+" بمقدار "+ str((calories/1000.0)*data[i][16]) + " " + str(data[i][17])+"\n"
-                dispatcher.utter_message(text=var)
-        
+            food_item = get_food(food_ids[i][0])
+
+            food_calory = (food_ids[i][1]*lunch_calory)/100.0
+            
+            grams = (food_calory*100) / food_item[0][2]
+
+            dispatcher.utter_message(text=food_item[0][1]+" بمقدار " + str(grams) +" جرام ")
+
         return []
+    
+### get dinner meal #######    
 class ActionAskForDinner(Action):
     def name(self) -> Text:
         return "action_ask_for_dinner"
@@ -88,10 +95,21 @@ class ActionAskForDinner(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         id = tracker.sender_id
         calories = get_calories(id)
-        var = ""
+        dinner_calory = (20.0*calories)/100.0
+        meal = get_dinner_meal()
+        dispatcher.utter_message(text=meal[0][1])
+        if meal[0][2] != 'nan':
+            dispatcher.utter_message(text="ممكن تبص على طريقة الطبخ من خلال اللينك دا "+meal[0][2])
+        dispatcher.utter_message(text="المكونات كالتالي")
+        food_ids = get_food_dinner_id(meal[0][0])
+        m = len(food_ids)
         for i in range (m):
-            if data[i][20] != -1.0 :
-                 var=data[i][20]+" بمقدار "+ str((calories/1000.0)*data[i][21]) + " " + str(data[i][22])+"\n"
-                 dispatcher.utter_message(text=var)
-        
+            food_item = get_food(food_ids[i][0])
+
+            food_calory = (food_ids[i][1]*dinner_calory)/100.0
+            
+            grams = (food_calory*100) / food_item[0][2]
+
+            dispatcher.utter_message(text=food_item[0][1]+" بمقدار " + str(grams) +" جرام ")
+
         return []

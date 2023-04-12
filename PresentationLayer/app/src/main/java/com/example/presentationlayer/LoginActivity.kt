@@ -11,9 +11,9 @@ import com.google.android.material.textfield.TextInputEditText
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
+var userId:Int = 1
 class LoginActivity : AppCompatActivity() {
-    var id:Int = 0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +30,6 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
     fun login(){
         val instance: StartApi = StartApi()
         var email = findViewById<TextInputEditText>(R.id.emailInput)
@@ -41,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
                     if(response.isSuccessful){
                         val nullable:Int? = response.body()?.toInt()
                         if(nullable!=null){
-                            id = nullable
+                            userId = nullable
                         }
 
                         val intent = Intent(this@LoginActivity,MainScreenActivity::class.java)

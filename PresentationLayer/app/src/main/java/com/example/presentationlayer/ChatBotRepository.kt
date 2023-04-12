@@ -1,5 +1,6 @@
 package com.example.presentationlayer
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import com.example.presentationlayer.api.ChatBotApiClient
 import com.example.presentationlayer.model.BotMessage
@@ -20,6 +21,7 @@ object ChatBotRepository {
 
 
     fun queryBot(message: String) {
-        mChatBotApiClient.queryBot(Constants.USER, message)
+        mChatBotApiClient.queryBot(userId, message)
+        Log.d("id",userId.toString())
     }
 }
