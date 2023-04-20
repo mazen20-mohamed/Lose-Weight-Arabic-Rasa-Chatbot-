@@ -12,7 +12,7 @@ mycrursor = mydatabase.cursor()
 
 ###### return calories of a user ######
 def get_calories(id):
-    a = mycrursor.execute("SELECT calories from User_Info where Id = '"+str(id)+"'")
+    a = mycrursor.execute("SELECT calories from User where Id = '"+str(id)+"'")
     p = mycrursor.fetchall()[0][0]
     return p
 
@@ -52,5 +52,12 @@ def get_lunch_meal():
 def get_food_lunch_id(id):
   mycrursor.execute("SELECT food_id,percentage FROM lunch_food where lunch_id = '"+str(id)+"'")
   return mycrursor.fetchall()
+
+
+def get_last_time_taken(id):
+  mycrursor.execute("SELECT time_taken FROM login_update where user_id = '"+str(id)+"'")
+  p = mycrursor.fetchall()
+  m = len (p)
+  return p[m-1][0]
 
 mydatabase.commit()

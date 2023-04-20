@@ -1,8 +1,11 @@
 package com.example.AuthoRasa;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
-@Table(name = "user_info", uniqueConstraints = {@UniqueConstraint(columnNames = {"email"})})
+@Table(name = "user", uniqueConstraints = {@UniqueConstraint(columnNames = {"email"})})
 public class User {
     @Id
     private Long id;
@@ -33,6 +36,21 @@ public class User {
 
     @Column(name = "calories")
     private int calories;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<LoginUpdate> listLogin = new ArrayList<>();
+
+    public void addInListLogin(LoginUpdate listLogin) {
+        this.listLogin.add(listLogin);
+    }
+
+    public List<LoginUpdate> getListLogin() {
+        return listLogin;
+    }
+
+    public void setListLogin(List<LoginUpdate> listLogin) {
+        this.listLogin = listLogin;
+    }
 
     public String getGender() {
         return gender;

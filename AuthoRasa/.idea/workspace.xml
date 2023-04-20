@@ -4,36 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e42cf336-0d70-48fc-9382-e0d5d54c8a7e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.rasa/cache/cache.db" beforeDir="false" afterPath="$PROJECT_DIR$/../.rasa/cache/cache.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/AuthoRasa/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/AuthoRasa/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/AuthoRasa/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/AuthoRasa/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/app/src/main/java/com/example/presentationlayer/ApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/app/src/main/java/com/example/presentationlayer/api/ApiService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/app/src/main/java/com/example/presentationlayer/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/app/src/main/java/com/example/presentationlayer/LoginActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/app/src/main/java/com/example/presentationlayer/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/app/src/main/java/com/example/presentationlayer/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/app/src/main/java/com/example/presentationlayer/MainScreenActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/app/src/main/java/com/example/presentationlayer/MainScreenActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/app/src/main/java/com/example/presentationlayer/RegisterActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/app/src/main/java/com/example/presentationlayer/RegisterActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/app/src/main/java/com/example/presentationlayer/RegisterActivity2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/app/src/main/java/com/example/presentationlayer/RegisterActivity2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/app/src/main/java/com/example/presentationlayer/StartApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/app/src/main/java/com/example/presentationlayer/api/StartApi.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/app/src/main/res/drawable/send_msg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/app/src/main/res/layout/activity_main_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/app/src/main/res/layout/activity_main_screen.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/app/src/main/res/layout/activity_register.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/app/src/main/res/layout/activity_register2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/app/src/main/res/layout/activity_register2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PresentationLayer/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../PresentationLayer/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../actions/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../actions/actions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_connectivity.py" beforeDir="false" afterPath="$PROJECT_DIR$/../data_connectivity.py" afterDir="false" />
-    </list>
+    <list default="true" id="e42cf336-0d70-48fc-9382-e0d5d54c8a7e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -115,5 +86,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/AuthoRasa/LoginUpdate.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
