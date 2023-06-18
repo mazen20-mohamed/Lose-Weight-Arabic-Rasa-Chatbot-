@@ -49,3 +49,8 @@ stories:
   steps:
   - intent: dinner
   - action: action_ask_for_dinner
+
+- story: Find matching food
+  steps:
+  - intent: find_matching_food
+  - action: action_find_matching_food
