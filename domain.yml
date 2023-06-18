@@ -15,6 +15,18 @@ intents:
   - find_matching_food
   
 
+
+entities:
+  - foodName 
+
+slots:
+  foodName:
+    type: text 
+    influence_conversation: false 
+    mappings: 
+    - type: from_entities 
+      entity: foodName
+      
 responses:
   utter_greet:
   - text: "مرحبا ! كيف حالك"
