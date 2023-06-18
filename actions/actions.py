@@ -111,3 +111,54 @@ class ActionAskForDinner(Action):
             dispatcher.utter_message(text=food_item[0][1]+" بمقدار " + str(grams) +" جرام ")
 
         return []
+
+
+
+class FindMatchingFoodAction(Action):
+    def name(self) -> Text:
+        return "action_find_matching_food"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        df = pd.read_excel('food_table.xls')
+
+        food_word = tracker.latest_message['text']
+
+        def find_matching_food(food_word):
+            best_match = None
+            best_ratio = 0
+
+            for food_name in df['name']:
+                ratio = fuzz.ratio(food_word, food_name)
+
+                if ratio > best_ratio:
+                    best_ratio = ratio
+                    best_match = food_name
+
+            return best_match
+
+        # Find the matching food name
+        matched_food = find_matching_food(food_word)
+
+        if matched_food is not None:
+            food_info = df[df['name'] == matched_food]
+
+            food_name = food_info['name'].values[0]
+            calories = food_info['calories'].values[0]
+            protein = food_info['protein'].values[0]
+            fat = food_info['fat'].values[0]
+            size = food_info['size'].values[0]
+            type_size = food_info['type_size'].values[0]
+
+            dispatcher.utter_message("Name: " + str(food_name))
+            dispatcher.utter_message("Calories: " + str(calories))
+            dispatcher.utter_message("Protein: " + str(protein))
+            dispatcher.utter_message("Fat: " + str(fat))
+            dispatcher.utter_message("Size: " + str(size))
+            dispatcher.utter_message("Type/Size: " + str(type_size))
+        else:
+            dispatcher.utter_message(text="No matching food found.")
+
+        return []
