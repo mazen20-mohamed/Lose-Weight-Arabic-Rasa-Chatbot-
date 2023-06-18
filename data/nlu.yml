@@ -88,6 +88,10 @@ nlu:
     - عندك عشاء ايه
     - أريد ان اتعشي
 
+- intent: action_find_matching_food
+  examples: |
+    - جوز الهند] فيه كام كالوري ] (foodName)
+  
 - intent: bot_challenge
   examples: |
     - هل انت روبوت؟
