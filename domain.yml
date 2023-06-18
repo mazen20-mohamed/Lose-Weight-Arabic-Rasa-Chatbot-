@@ -12,6 +12,7 @@ intents:
   - snack
   - lunch
   - dinner
+  - find_matching_food
   
 
 responses:
@@ -40,6 +41,7 @@ actions:
   - action_ask_for_snack
   - action_ask_for_lunch
   - action_ask_for_dinner
+  - action_find_matching_food
 
 session_config:
   session_expiration_time: 60
